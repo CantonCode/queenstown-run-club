@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Queenstown Run Club</title>
+<meta name="description" content="Queenstown Run Club is a free social run club in Queenstown, New Zealand. We meet every Wednesday at 6:15pm at Altitude Brewing for a social 5K, and every Friday morning for a sunrise run up Queenstown Hill. All paces welcome.">
+<meta property="og:title" content="Queenstown Run Club">
+<meta property="og:description" content="Free social runs in Queenstown. Wednesdays 6:15pm at Altitude Brewing, Fridays at sunrise on Queenstown Hill. All paces welcome.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,600..900,100,1&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#next-run">Skip to next run</a>
+
+<header class="nav" id="top">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Queenstown Run Club home">
+      <span class="brand-mark" aria-hidden="true">
+        <span class="brand-mark-text">Queenstown<br>Run Club</span>
+      </span>
+      <span class="brand-word">Queenstown<br>Run Club</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#schedule">Schedule</a>
+      <a href="#quest">Friday Quest</a>
+      <a href="#new">New here</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-cream btn-sm" href="https://www.instagram.com/queenstownrunclub" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Queenstown · Tāhuna · Est. 2025</p>
+      <h1 class="display">Run with us.</h1>
+      <p class="lede">A free social run club in Queenstown. Two runs a week, every pace welcome, and a drink with the crew at the end.</p>
+      <div class="hero-actions">
+        <a class="btn btn-cream" href="#next-run">Next run</a>
+        <a class="btn btn-ghost" href="#schedule">Weekly schedule</a>
+      </div>
+    </div>
+    <div class="hero-badge" aria-hidden="true">
+      <svg class="ring" viewBox="0 0 300 300">
+        <defs>
+          <path id="ringPath" d="M150,150 m-118,0 a118,118 0 1,1 236,0 a118,118 0 1,1 -236,0"></path>
+        </defs>
+        <text class="ring-text" textLength="741" lengthAdjust="spacing">
+          <textPath href="#ringPath" startOffset="0">ALL PACES WELCOME · WEDNESDAY 6:15PM · FRIDAY SUNRISE · </textPath>
+        </text>
+      </svg>
+      <div class="badge">
+        <span class="badge-text">Queenstown<br>Run Club</span>
+        <span class="badge-est">Est. 2025</span>
+      </div>
+    </div>
+  </div>
+  <svg class="mountains" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+    <path class="m-back" d="M0,220 L0,150 L90,110 L170,140 L260,70 L340,120 L420,60 L500,110 L560,80 L640,130 L720,40 L800,100 L870,70 L950,120 L1030,55 L1110,110 L1190,80 L1270,130 L1350,90 L1440,140 L1440,220 Z"></path>
+    <path class="m-front" d="M0,220 L0,185 L110,150 L200,175 L300,120 L380,160 L470,105 L560,165 L650,130 L740,175 L830,110 L920,170 L1000,140 L1090,180 L1180,130 L1270,170 L1360,145 L1440,180 L1440,220 Z"></path>
+  </svg>
+</section>
+
+<!-- NEXT RUN -->
+<section class="section" id="next-run">
+  <div class="wrap">
+    <div class="next-card" id="nextCard">
+      <div class="next-head">
+        <span class="live"><span class="live-dot"></span>Next run</span>
+        <span class="next-countdown" id="nextCountdown">Loading…</span>
+      </div>
+      <div class="next-body">
+        <div class="next-when">
+          <p class="next-day" id="nextDay">Wednesday</p>
+          <p class="next-date" id="nextDate">&nbsp;</p>
+        </div>
+        <div class="next-what">
+          <h2 class="next-title" id="nextTitle">Social 5K</h2>
+          <p class="next-desc" id="nextDesc">Queenstown Marina to the bridge and back. Finish at Altitude Brewing.</p>
+          <dl class="next-meta">
+            <div><dt>Time</dt><dd id="nextTime">6:15pm</dd></div>
+            <div><dt>Meet at</dt><dd id="nextPlace">Altitude Brewing</dd></div>
+            <div><dt>Distance</dt><dd id="nextDist">5 km</dd></div>
+          </dl>
+          <div class="next-actions">
+            <a class="btn btn-blue" id="nextMap" href="https://www.google.com/maps/search/?api=1&query=Altitude+Brewing+Queenstown" target="_blank" rel="noopener">Directions</a>
+            <a class="btn btn-outline" href="#schedule">Full schedule</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>All paces welcome</span><span>✦</span>
+    <span>Wednesday 6:15pm · Altitude Brewing</span><span>✦</span>
+    <span>Friday sunrise · Queenstown Hill</span><span>✦</span>
+    <span>Free, no sign-up</span><span>✦</span>
+    <span>All paces welcome</span><span>✦</span>
+    <span>Wednesday 6:15pm · Altitude Brewing</span><span>✦</span>
+    <span>Friday sunrise · Queenstown Hill</span><span>✦</span>
+    <span>Free, no sign-up</span><span>✦</span>
+  </div>
+</div>
+
+<!-- SCHEDULE -->
+<section class="section" id="schedule">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow eyebrow-blue">Every week</p>
+      <h2 class="h2">Two runs. Same spots. Every week.</h2>
+      <p class="sub">Turn up to one or both. No sign-up, no cost, no pace requirement.</p>
+    </div>
+
+    <ol class="week" aria-label="Week at a glance" id="weekStrip">
+      <li data-dow="1"><span>Mon</span></li>
+      <li data-dow="2"><span>Tue</span></li>
+      <li data-dow="3" class="run"><span>Wed</span><em>6:15pm</em></li>
+      <li data-dow="4"><span>Thu</span></li>
+      <li data-dow="5" class="run"><span>Fri</span><em>6:20am</em></li>
+      <li data-dow="6"><span>Sat</span></li>
+      <li data-dow="0"><span>Sun</span></li>
+    </ol>
+
+    <div class="runs">
+      <article class="run-card run-wed">
+        <div class="run-top">
+          <p class="run-day">Wednesday</p>
+          <p class="run-time">6:15<span>pm</span></p>
+        </div>
+        <h3 class="run-name">Social 5K</h3>
+        <p class="run-copy">We meet at Altitude Brewing and run a social 5K from Queenstown Marina to the bridge. Then it’s back to Altitude for a drink, food, and a catch-up.</p>
+        <ul class="run-facts">
+          <li><strong>Meet</strong> Altitude Brewing, Frankton Marina</li>
+          <li><strong>Route</strong> Marina to the bridge, flat lakefront trail</li>
+          <li><strong>Pace</strong> All paces, nobody runs alone</li>
+          <li><strong>After</strong> Drinks and Grub Club flatbreads at Altitude</li>
+        </ul>
+        <a class="link" href="https://www.google.com/maps/search/?api=1&query=Altitude+Brewing+Queenstown" target="_blank" rel="noopener">Altitude Brewing on Google Maps</a>
+      </article>
+
+      <article class="run-card run-fri">
+        <div class="run-top">
+          <p class="run-day">Friday</p>
+          <p class="run-time">6:20<span>am</span></p>
+        </div>
+        <h3 class="run-name">The Quest</h3>
+        <p class="run-copy">A sunrise mission up Queenstown Hill. Walkers and runners take different tracks and meet at the Basket of Dreams by 7:00am, then we run down together.</p>
+        <ul class="run-facts">
+          <li><strong>Meet</strong> 6:20am at the car parks, 7:00am at the top</li>
+          <li><strong>Route</strong> Queenstown Hill to the Basket of Dreams</li>
+          <li><strong>Groups</strong> Walking group and running group</li>
+          <li><strong>With</strong> Cyclops</li>
+        </ul>
+        <a class="link" href="#quest">How the Quest works</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- QUEST -->
+<section class="section quest" id="quest">
+  <div class="wrap">
+    <div class="section-head section-head-light">
+      <p class="eyebrow">Friday mornings</p>
+      <h2 class="h2">The Quest</h2>
+      <p class="sub">Queenstown Hill before work. Pick your group, park up at 6:20am, and we all meet at the Basket of Dreams by 7:00am for sunrise. We run down together, all paces welcome.</p>
+    </div>
+    <div class="groups">
+      <div class="group">
+        <p class="group-label">Group 1</p>
+        <h3 class="group-name">Walking group</h3>
+        <p class="group-copy">A steady hike to the top. Good if you’re new, easing back in, or just want the sunrise without the lungs burning.</p>
+        <dl class="group-meta">
+          <div><dt>Park at</dt><dd>Queenstown Hill Walking Track car park</dd></div>
+          <div><dt>From</dt><dd>6:20am</dd></div>
+        </dl>
+        <a class="link link-light" href="https://www.google.com/maps/search/?api=1&query=Queenstown+Hill+Walking+Track" target="_blank" rel="noopener">Directions</a>
+      </div>
+      <div class="group">
+        <p class="group-label">Group 2</p>
+        <h3 class="group-name">Running group + extra elevation</h3>
+        <p class="group-copy">Starts lower in town for more climbing. Run up through the pines and arrive at the top with the walkers.</p>
+        <dl class="group-meta">
+          <div><dt>Park at</dt><dd>Stanley Street car park, across from Life’s Grind Espresso</dd></div>
+          <div><dt>From</dt><dd>6:20am</dd></div>
+        </dl>
+        <a class="link link-light" href="https://www.google.com/maps/search/?api=1&query=Stanley+Street+Car+Park+Queenstown" target="_blank" rel="noopener">Directions</a>
+      </div>
+    </div>
+    <p class="quest-note">Meet at the Basket of Dreams by <strong>7:00am</strong>. Bring a head torch in winter, a layer for the top, and something warm for the way down.</p>
+  </div>
+</section>
+
+<!-- NEW HERE -->
+<section class="section" id="new">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow eyebrow-blue">New here?</p>
+      <h2 class="h2">Just come say hi.</h2>
+      <p class="sub">That’s genuinely it. Here’s what to expect on your first night.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>Turn up</h3>
+        <p>Find the group outside Altitude Brewing a few minutes before 6:15pm. Look for the blue hoodies. Tell someone it’s your first time and they’ll introduce you around.</p>
+      </div>
+      <div class="step">
+        <h3>Run your pace</h3>
+        <p>The route is an out-and-back on the lakefront, so fast and slow runners see each other the whole way. Walk-run is fine. Nobody gets left behind.</p>
+      </div>
+      <div class="step">
+        <h3>Stay for one</h3>
+        <p>We finish back at Altitude for a drink, food, and a catch-up. The run is the excuse. The hang is the point.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="section partners">
+  <div class="wrap">
+    <p class="eyebrow eyebrow-blue partners-label">Made possible by</p>
+    <ul class="partner-list">
+      <li>
+        <span class="partner-name">Altitude Brewing</span>
+        <span class="partner-role">Home base, Frankton Marina</span>
+      </li>
+      <li>
+        <span class="partner-name">Grub Club</span>
+        <span class="partner-role">Loaded flatbreads after the run</span>
+      </li>
+      <li>
+        <span class="partner-name">Cyclops</span>
+        <span class="partner-role">Friday Quest partner</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap faq-grid">
+    <div class="section-head section-head-left">
+      <p class="eyebrow eyebrow-blue">Good to know</p>
+      <h2 class="h2">Questions people ask before their first run</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Do I need to sign up or pay?</summary>
+        <p>No. Just show up. There’s no membership, no fee, and no booking. Bring money for a drink afterwards if you’re staying.</p>
+      </details>
+      <details>
+        <summary>How fast do I need to be?</summary>
+        <p>Any pace works. Wednesday is a flat 5K with people running anywhere from 4 to 8 minutes per kilometre, and plenty walk-run it. Friday has a dedicated walking group.</p>
+      </details>
+      <details>
+        <summary>What if it’s raining or snowing?</summary>
+        <p>We run in most weather. Keep an eye on our Instagram on the day for any changes. If it’s properly dangerous, we call it and go straight to the drinks.</p>
+      </details>
+      <details>
+        <summary>Can I bring a dog, a mate, or a pram?</summary>
+        <p>Yes to all three on Wednesday. The lakefront trail is wide and flat. Friday’s hill track is steep and narrow, so prams won’t work, but well-behaved dogs on a lead are fine.</p>
+      </details>
+      <details>
+        <summary>Where do I park on Wednesday?</summary>
+        <p>There’s parking at Frankton Marina next to Altitude Brewing, and more along the lakefront. The Frankton bus stops nearby too.</p>
+      </details>
+      <details>
+        <summary>Can I get a hoodie?</summary>
+        <p>We ran a one-off hoodie order in 2026 in cream and navy. Follow Instagram to hear about the next round.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta">
+  <div class="wrap">
+    <h2 class="display display-sm">See you Wednesday.</h2>
+    <p class="lede">6:15pm at Altitude Brewing. All paces welcome, and if you’re new, just come say hi.</p>
+    <div class="hero-actions">
+      <a class="btn btn-cream" href="https://www.instagram.com/queenstownrunclub" target="_blank" rel="noopener">Follow on Instagram</a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Altitude+Brewing+Queenstown" target="_blank" rel="noopener">Directions to Altitude</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark brand-mark-lg" aria-hidden="true">
+        <span class="brand-mark-text">Queenstown<br>Run Club</span>
+      </span>
+      <p>Queenstown Run Club<br><span>Est. 2025 · Tāhuna, Aotearoa New Zealand</span></p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#quest">Friday Quest</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="https://www.instagram.com/queenstownrunclub" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
+    <p class="footer-fine">Run at your own risk, look after each other, and leave the trail better than you found it.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
