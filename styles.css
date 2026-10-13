@@ -301,9 +301,15 @@ ul, ol { padding: 0; list-style: none; }
 .partners { padding-block: 0; }
 .partners .wrap { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: 36px; display: grid; gap: 20px; }
 .partners-label { text-align: center; }
-.partner-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px 56px; }
-.partner-list li { display: grid; justify-items: center; gap: 2px; text-align: center; }
-.partner-name { font-family: var(--font-display); font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 48; font-weight: 800; font-size: 1.6rem; color: var(--navy); letter-spacing: -.01em; }
+.partner-list { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 28px 72px; }
+.partner-list li { display: grid; justify-items: center; gap: 10px; text-align: center; }
+.partner-logo { display: grid; place-items: center; height: 96px; text-decoration: none; }
+.partner-altitude .logo-mask {
+  display: block; width: 220px; height: 96px; background: var(--blue);
+  -webkit-mask: url("assets/altitude-brewing.png") center / contain no-repeat;
+  mask: url("assets/altitude-brewing.png") center / contain no-repeat;
+}
+.partner-grub img { width: 108px; height: 108px; mix-blend-mode: multiply; }
 .partner-role { font-family: var(--font-caps); text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; color: var(--ink-soft); }
 
 /* ---------- FAQ ---------- */
