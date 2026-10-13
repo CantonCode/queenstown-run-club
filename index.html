@@ -8,10 +8,14 @@
 <meta property="og:title" content="Queenstown Run Club">
 <meta property="og:description" content="Free social runs in Queenstown. Wednesdays 6:15pm at Altitude Brewing, Fridays at sunrise on Queenstown Hill. All paces welcome.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="assets/web/wed-run.jpg">
+<link rel="icon" href="assets/web/qtrc-blue.png" type="image/png">
+<link rel="preload" href="assets/web/gc-club-brand.otf" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="assets/web/earlgos.otf" as="font" type="font/otf" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,600..900,100,1&display=swap">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 
@@ -20,15 +24,12 @@
 <header class="nav" id="top">
   <div class="wrap nav-inner">
     <a class="brand" href="#top" aria-label="Queenstown Run Club home">
-      <span class="brand-mark" aria-hidden="true">
-        <span class="brand-mark-text">Queenstown<br>Run Club</span>
-      </span>
-      <span class="brand-word">Queenstown<br>Run Club</span>
+      <img class="brand-logo" src="assets/web/qtrc-white.png" alt="Queenstown Run Club" width="1486" height="503">
     </a>
     <nav class="nav-links" aria-label="Sections">
       <a href="#schedule">Schedule</a>
       <a href="#quest">Friday Quest</a>
-      <a href="#new">New here</a>
+      <a href="#crew">The crew</a>
       <a href="#faq">FAQ</a>
     </nav>
     <a class="btn btn-cream btn-sm" href="https://www.instagram.com/queenstownrunclub" target="_blank" rel="noopener">Instagram</a>
@@ -59,15 +60,11 @@
         </text>
       </svg>
       <div class="badge">
-        <span class="badge-text">Queenstown<br>Run Club</span>
-        <span class="badge-est">Est. 2025</span>
+        <img src="assets/web/qtrc-blue.png" alt="" width="1486" height="503">
       </div>
     </div>
   </div>
-  <svg class="mountains" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
-    <path class="m-back" d="M0,220 L0,150 L90,110 L170,140 L260,70 L340,120 L420,60 L500,110 L560,80 L640,130 L720,40 L800,100 L870,70 L950,120 L1030,55 L1110,110 L1190,80 L1270,130 L1350,90 L1440,140 L1440,220 Z"></path>
-    <path class="m-front" d="M0,220 L0,185 L110,150 L200,175 L300,120 L380,160 L470,105 L560,165 L650,130 L740,175 L830,110 L920,170 L1000,140 L1090,180 L1180,130 L1270,170 L1360,145 L1440,180 L1440,220 Z"></path>
-  </svg>
+  <img class="mountains" src="assets/web/mountains.png" alt="" width="1651" height="339">
 </section>
 
 <!-- NEXT RUN -->
@@ -136,35 +133,41 @@
 
     <div class="runs">
       <article class="run-card run-wed">
-        <div class="run-top">
-          <p class="run-day">Wednesday</p>
-          <p class="run-time">6:15<span>pm</span></p>
+        <img class="run-photo" src="assets/web/wed-run.jpg" alt="The Wednesday crew outside Altitude Brewing with the Remarkables behind" width="1600" height="1200" loading="lazy">
+        <div class="run-body">
+          <div class="run-top">
+            <p class="run-day">Wednesday</p>
+            <p class="run-time">6:15<span>pm</span></p>
+          </div>
+          <h3 class="run-name">Social 5K</h3>
+          <p class="run-copy">We meet at Altitude Brewing and run a social 5K from Queenstown Marina to the bridge. Then it’s back to Altitude for a drink, food, and a catch-up.</p>
+          <ul class="run-facts">
+            <li><strong>Meet</strong> Altitude Brewing, Frankton Marina</li>
+            <li><strong>Route</strong> Marina to the bridge, flat lakefront trail</li>
+            <li><strong>Pace</strong> All paces, nobody runs alone</li>
+            <li><strong>After</strong> Drinks and Grub Club flatbreads at Altitude</li>
+          </ul>
+          <a class="link" href="https://www.google.com/maps/search/?api=1&query=Altitude+Brewing+Queenstown" target="_blank" rel="noopener">Altitude Brewing on Google Maps</a>
         </div>
-        <h3 class="run-name">Social 5K</h3>
-        <p class="run-copy">We meet at Altitude Brewing and run a social 5K from Queenstown Marina to the bridge. Then it’s back to Altitude for a drink, food, and a catch-up.</p>
-        <ul class="run-facts">
-          <li><strong>Meet</strong> Altitude Brewing, Frankton Marina</li>
-          <li><strong>Route</strong> Marina to the bridge, flat lakefront trail</li>
-          <li><strong>Pace</strong> All paces, nobody runs alone</li>
-          <li><strong>After</strong> Drinks and Grub Club flatbreads at Altitude</li>
-        </ul>
-        <a class="link" href="https://www.google.com/maps/search/?api=1&query=Altitude+Brewing+Queenstown" target="_blank" rel="noopener">Altitude Brewing on Google Maps</a>
       </article>
 
       <article class="run-card run-fri">
-        <div class="run-top">
-          <p class="run-day">Friday</p>
-          <p class="run-time">6:20<span>am</span></p>
+        <img class="run-photo" src="assets/web/quest-pic.jpg" alt="Runners at the Basket of Dreams on Queenstown Hill at sunrise" width="900" height="1600" loading="lazy">
+        <div class="run-body">
+          <div class="run-top">
+            <p class="run-day">Friday</p>
+            <p class="run-time">6:20<span>am</span></p>
+          </div>
+          <h3 class="run-name">The Quest</h3>
+          <p class="run-copy">A sunrise mission up Queenstown Hill. Walkers and runners take different tracks and meet at the Basket of Dreams by 7:00am, then we run down together.</p>
+          <ul class="run-facts">
+            <li><strong>Meet</strong> 6:20am at the car parks, 7:00am at the top</li>
+            <li><strong>Route</strong> Queenstown Hill to the Basket of Dreams</li>
+            <li><strong>Groups</strong> Walking group and running group</li>
+            <li><strong>After</strong> Run down together, coffee in town</li>
+          </ul>
+          <a class="link" href="#quest">How the Quest works</a>
         </div>
-        <h3 class="run-name">The Quest</h3>
-        <p class="run-copy">A sunrise mission up Queenstown Hill. Walkers and runners take different tracks and meet at the Basket of Dreams by 7:00am, then we run down together.</p>
-        <ul class="run-facts">
-          <li><strong>Meet</strong> 6:20am at the car parks, 7:00am at the top</li>
-          <li><strong>Route</strong> Queenstown Hill to the Basket of Dreams</li>
-          <li><strong>Groups</strong> Walking group and running group</li>
-          <li><strong>After</strong> Run down together, coffee in town</li>
-        </ul>
-        <a class="link" href="#quest">How the Quest works</a>
       </article>
     </div>
   </div>
@@ -175,7 +178,7 @@
   <div class="wrap">
     <div class="section-head section-head-light">
       <p class="eyebrow">Friday mornings</p>
-      <h2 class="h2">The Quest</h2>
+      <h2 class="quest-logo"><span class="quest-mark" role="img" aria-label="Quest"></span></h2>
       <p class="sub">Queenstown Hill before work. Pick your group, park up at 6:20am, and we all meet at the Basket of Dreams by 7:00am for sunrise. We run down together, all paces welcome.</p>
     </div>
     <div class="groups">
@@ -201,6 +204,27 @@
       </div>
     </div>
     <p class="quest-note">Meet at the Basket of Dreams by <strong>7:00am</strong>. Bring a head torch in winter, a layer for the top, and something warm for the way down.</p>
+  </div>
+</section>
+
+<!-- CREW -->
+<section class="section" id="crew">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow eyebrow-blue">The crew</p>
+      <h2 class="h2">Started by two mates. Run by everyone who shows up.</h2>
+      <p class="sub">Queenstown Run Club kicked off in 2025 with a handful of people and a 5K. It’s now a weekly fixture at Altitude. These two keep it ticking over.</p>
+    </div>
+    <div class="founders">
+      <figure class="founder">
+        <img src="assets/web/toby.jpg" alt="Toby, co-founder of Queenstown Run Club" width="675" height="900" loading="lazy">
+        <figcaption><strong>Toby</strong><span>Co-founder</span></figcaption>
+      </figure>
+      <figure class="founder">
+        <img src="assets/web/karin.jpg" alt="Karin, co-founder of Queenstown Run Club" width="675" height="900" loading="lazy">
+        <figcaption><strong>Karin</strong><span>Co-founder</span></figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
@@ -242,7 +266,7 @@
       </li>
       <li>
         <span class="partner-logo partner-grub">
-          <img src="assets/grub-club.png" alt="Grub Club" width="459" height="459">
+          <img src="assets/web/grub-club-full.png" alt="Grub Club, loaded flatbreads" width="1280" height="1131" loading="lazy">
         </span>
         <span class="partner-role">Loaded flatbreads after the run</span>
       </li>
@@ -296,6 +320,7 @@
       <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Altitude+Brewing+Queenstown" target="_blank" rel="noopener">Directions to Altitude</a>
     </div>
   </div>
+  <img class="mountains mountains-cta" src="assets/web/mountains.png" alt="" width="1651" height="339">
 </section>
 
 </main>
@@ -303,14 +328,13 @@
 <footer class="footer">
   <div class="wrap footer-inner">
     <div class="footer-brand">
-      <span class="brand-mark brand-mark-lg" aria-hidden="true">
-        <span class="brand-mark-text">Queenstown<br>Run Club</span>
-      </span>
-      <p>Queenstown Run Club<br><span>Est. 2025 · Tāhuna, Aotearoa New Zealand</span></p>
+      <img class="footer-logo" src="assets/web/qtrc-white.png" alt="Queenstown Run Club" width="1486" height="503">
+      <p><span>Est. 2025 · Tāhuna, Aotearoa New Zealand</span></p>
     </div>
     <ul class="footer-links">
       <li><a href="#schedule">Schedule</a></li>
       <li><a href="#quest">Friday Quest</a></li>
+      <li><a href="#crew">The crew</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="https://www.instagram.com/queenstownrunclub" target="_blank" rel="noopener">Instagram</a></li>
     </ul>
@@ -318,6 +342,6 @@
   </div>
 </footer>
 
-<script src="app.js"></script>
+<script src="app.js?v=3"></script>
 </body>
 </html>
