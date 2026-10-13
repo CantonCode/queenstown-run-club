@@ -21,7 +21,7 @@
     {
       dow: 5, hour: 6, minute: 20, durationMin: 100,
       day: "Friday",
-      title: "The Quest",
+      title: "Quest",
       desc: "Sunrise on Queenstown Hill. Park at 6:20am, meet at the Basket of Dreams by 7:00am, run down together.",
       time: "6:20am",
       place: "Queenstown Hill car parks",
