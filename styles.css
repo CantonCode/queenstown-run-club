@@ -328,13 +328,15 @@ ul, ol { padding: 0; list-style: none; }
 .partners-label { text-align: center; }
 .partner-list { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 28px 72px; }
 .partner-list li { display: grid; justify-items: center; gap: 10px; text-align: center; }
-.partner-logo { display: grid; place-items: center; height: 120px; text-decoration: none; }
-.partner-altitude .logo-mask {
-  display: block; width: 240px; height: 104px; background: var(--blue);
-  -webkit-mask: url("assets/web/altitude-reverse.webp") center / contain no-repeat;
-  mask: url("assets/web/altitude-reverse.webp") center / contain no-repeat;
+.partner-logo {
+  display: grid; place-items: center; height: 124px; width: 220px; padding: 20px 26px;
+  border-radius: 16px; text-decoration: none; overflow: hidden; transition: transform .25s var(--ease);
 }
-.partner-grub img { width: 132px; height: auto; }
+.partner-logo:hover { transform: translateY(-2px); }
+.partner-altitude { background: var(--blue); }
+.partner-altitude img { width: 100%; height: auto; }
+.partner-grub { background: #fff; border: 1px solid var(--line); }
+.partner-grub img { height: 84px; width: auto; }
 .partner-role { font-family: var(--font-caps); text-transform: uppercase; letter-spacing: .12em; font-size: .85rem; color: var(--ink-soft); }
 
 /* ---------- FAQ ---------- */
