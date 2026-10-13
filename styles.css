@@ -190,7 +190,8 @@ ul, ol { padding: 0; list-style: none; }
 .section-head { display: grid; gap: 14px; text-align: center; justify-items: center; margin-bottom: clamp(32px, 5vw, 56px); }
 .section-head-left { text-align: left; justify-items: start; margin-bottom: 0; }
 .section-head-light .h2, .section-head-light .sub { color: var(--cream); }
-.section-head-light .sub { opacity: .9; }
+.section-head-light .sub { opacity: .9; max-width: 40em; }
+.section-head-light .sub strong { color: #fff; font-weight: 600; }
 
 /* ---------- Next run ---------- */
 #next-run { padding-top: 0; padding-bottom: clamp(40px, 6vw, 72px); margin-top: calc(-1 * clamp(70px, 9vw, 120px)); position: relative; z-index: 2; }
@@ -303,7 +304,6 @@ ul, ol { padding: 0; list-style: none; }
 .group-meta div { display: grid; grid-template-columns: 72px 1fr; gap: 12px; }
 .group-meta dt { color: var(--cream); opacity: .7; }
 .group-meta dd { font-weight: 600; }
-.quest-note { margin-top: 24px; text-align: center; opacity: .9; max-width: 40em; margin-inline: auto; text-wrap: pretty; }
 @media (max-width: 760px) { .groups { grid-template-columns: 1fr; } }
 
 /* ---------- Crew ---------- */
