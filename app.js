@@ -16,7 +16,15 @@
       time: "6:15pm",
       place: "Altitude Brewing",
       dist: "5 km",
-      map: "https://www.google.com/maps/search/?api=1&query=Altitude+Brewing+Queenstown"
+      map: "https://www.google.com/maps/search/?api=1&query=Altitude+Brewing+Queenstown",
+      schema: {
+        id: "wednesday",
+        name: "Wednesday Social 5K, Queenstown Run Club",
+        description: "Free social 5K run from Queenstown Marina to the bridge and back, every Wednesday at 6:15pm. Meet at Altitude Brewing. All paces welcome, no sign-up needed.",
+        url: "https://queenstownrunclub.co.nz/#schedule",
+        image: "https://queenstownrunclub.co.nz/assets/web/wed-run.jpg",
+        location: { "@type": "Place", name: "Altitude Brewing", address: { "@type": "PostalAddress", streetAddress: "Frankton Marina", addressLocality: "Queenstown", addressRegion: "Otago", addressCountry: "NZ" } }
+      }
     },
     {
       dow: 5, hour: 6, minute: 20, durationMin: 100,
@@ -26,7 +34,15 @@
       time: "6:20am",
       place: "Queenstown Hill car parks",
       dist: "Hill climb",
-      map: "https://www.google.com/maps/search/?api=1&query=Queenstown+Hill+Walking+Track"
+      map: "https://www.google.com/maps/search/?api=1&query=Queenstown+Hill+Walking+Track",
+      schema: {
+        id: "friday",
+        name: "Quest, Friday sunrise run up Queenstown Hill",
+        description: "Free Friday morning sunrise run or walk up Queenstown Hill with Queenstown Run Club. Park at 6:20am, meet at the Basket of Dreams by 7:00am, run down together. Walking and running groups.",
+        url: "https://queenstownrunclub.co.nz/#quest",
+        image: "https://queenstownrunclub.co.nz/assets/web/quest-pic.jpg",
+        location: { "@type": "Place", name: "Queenstown Hill Walking Track", address: { "@type": "PostalAddress", addressLocality: "Queenstown", addressRegion: "Otago", addressCountry: "NZ" } }
+      }
     }
   ];
 
@@ -143,8 +159,77 @@
     if (el) el.textContent = text;
   }
 
+  // Next few real dates for each run, for Google's event structured data.
+  function upcoming(run, now, count) {
+    var p = nzParts(now);
+    var ahead = (run.dow - p.dow + 7) % 7;
+    var base = Date.UTC(p.y, p.m - 1, p.d);
+    var out = [];
+    for (var k = 0; out.length < count && k < count + 2; k++) {
+      var dd = new Date(base + (ahead + 7 * k) * 86400000);
+      var start = nzToInstant(dd.getUTCFullYear(), dd.getUTCMonth() + 1, dd.getUTCDate(), run.hour, run.minute);
+      var end = new Date(start.getTime() + run.durationMin * 60000);
+      if (end > now) out.push({ start: start, end: end });
+    }
+    return out;
+  }
+
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+
+  // ISO string in Queenstown local time with the correct offset, e.g. 2026-10-21T18:15:00+13:00
+  function nzIso(date) {
+    var p = nzParts(date);
+    var wallAsUtc = Date.UTC(p.y, p.m - 1, p.d, p.h, p.min, p.s);
+    var offMin = Math.round((wallAsUtc - date.getTime()) / 60000);
+    var sign = offMin < 0 ? "-" : "+";
+    offMin = Math.abs(offMin);
+    return p.y + "-" + pad(p.m) + "-" + pad(p.d) + "T" + pad(p.h) + ":" + pad(p.min) + ":00" + sign + pad(Math.floor(offMin / 60)) + ":" + pad(offMin % 60);
+  }
+
+  function injectEventSchema() {
+    var now = new Date();
+    var org = { "@id": "https://queenstownrunclub.co.nz/#club" };
+    var events = [];
+    RUNS.forEach(function (run) {
+      if (!run.schema) return;
+      upcoming(run, now, 4).forEach(function (occ) {
+        var dateKey = nzIso(occ.start).slice(0, 10);
+        events.push({
+          "@type": "Event",
+          "@id": "https://queenstownrunclub.co.nz/#" + run.schema.id + "-" + dateKey,
+          "name": run.schema.name,
+          "description": run.schema.description,
+          "url": run.schema.url,
+          "image": run.schema.image,
+          "startDate": nzIso(occ.start),
+          "endDate": nzIso(occ.end),
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "isAccessibleForFree": true,
+          "location": run.schema.location,
+          "organizer": org,
+          "performer": { "@type": "Organization", "name": "Queenstown Run Club", "url": "https://queenstownrunclub.co.nz/" },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "NZD",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2025-01-01T00:00:00+13:00",
+            "url": run.schema.url
+          }
+        });
+      });
+    });
+    var tag = document.createElement("script");
+    tag.type = "application/ld+json";
+    tag.id = "eventSchema";
+    tag.textContent = JSON.stringify({ "@context": "https://schema.org", "@graph": events });
+    document.head.appendChild(tag);
+  }
+
   try {
     render();
+    injectEventSchema();
     setInterval(render, 30000);
   } catch (e) {
     // Leave the static Wednesday defaults in place if anything goes wrong.
