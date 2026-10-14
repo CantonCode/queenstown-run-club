@@ -341,6 +341,9 @@ ul, ol { padding: 0; list-style: none; }
 .partner-grub { background: #fff; border: 1px solid var(--line); }
 .partner-grub img { height: 84px; width: auto; }
 .partner-role { font-family: var(--font-caps); text-transform: uppercase; letter-spacing: .12em; font-size: .85rem; color: var(--ink-soft); }
+.partner-links { display: flex; gap: 14px; justify-content: center; }
+.partner-links a { font-family: var(--font-caps); text-transform: uppercase; letter-spacing: .08em; font-size: .9rem; color: var(--blue); text-decoration: none; border-bottom: 1px solid transparent; }
+.partner-links a:hover { border-bottom-color: var(--blue); }
 
 /* ---------- FAQ ---------- */
 .faq-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 40px; align-items: start; }
